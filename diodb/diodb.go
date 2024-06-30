@@ -3,18 +3,18 @@ package diodb
 import (
 	"context"
 
-	jsonplugin "github.com/prodigysml/steampipe-plugin-discloseio-diodb/diodb/tables"
+	diodbplugin "github.com/prodigysml/steampipe-plugin-discloseio-diodb/diodb/tables"
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
 )
 
 func Plugin(ctx context.Context) *plugin.Plugin {
 	p := &plugin.Plugin{
-		Name: "json_plugin",
+		Name: "diodb_plugin",
 	}
 
 	// Attach table definitions
 	p.TableMap = map[string]*plugin.Table{
-		"diodb": jsonplugin.TableJSON(),
+		"diodb": diodbplugin.TableJSON(),
 	}
 
 	return p
